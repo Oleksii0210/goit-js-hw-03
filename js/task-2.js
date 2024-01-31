@@ -1,5 +1,12 @@
 "use strict;"
-function makeArray ([firstArray , secondArray,  maxLength]){
+function makeArray (firstArray, secondArray, maxLength){
+   const arraySum = firstArray.concat(secondArray);
+   if (arraySum.length > maxLength){
+      return arraySum.slice(0, maxLength);
+   } 
+   else{
+      return arraySum;
+   }
 }
 
 console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]

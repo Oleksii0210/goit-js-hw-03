@@ -1,8 +1,9 @@
 "use strict;"
 function slugify(title){
-
+    const normalized = title.toLowerCase();
+    const words = normalized.split(" ");
+	return words.join("-");
 }
-//slug
 
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
